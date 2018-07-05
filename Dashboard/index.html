@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8" />
+	<title>Dashboard - Revenue Sure</title>
+
+	<meta name="description" content="overview &amp; stats" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+
+
+
+	<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+	<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+	<script src="assets/js/ace-extra.min.js"></script>
+
+	<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+	<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+	<script src="https://www.amcharts.com/lib/3/pie.js"></script>
+	<script src="https://www.amcharts.com/lib/3/plugins/animate/animate.min.js"></script>
+	<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+	<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+	<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+</head>
+
+<body class="no-skin">
+<div id="navbar" class="navbar navbar-default          ace-save-state">
+	<div class="navbar-container ace-save-state" id="navbar-container">
+		<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+			<span class="sr-only">Toggle sidebar</span>
+
+			<span class="icon-bar"></span>
+
+			<span class="icon-bar"></span>
+
+			<span class="icon-bar"></span>
+		</button>
+
+		<div class="navbar-header pull-left">
+			<a href="index.html" class="navbar-brand">
+				<small>
+					<!-- <i class="fa fa-leaf"></i> -->
+					<!-- <img src="assets/images/logo.png" style="height:30px; width:70px;"> -->
+					Revenue Sure
+				</small>
+			</a>
+		</div>
+
+		<div class="navbar-buttons navbar-header pull-right" role="navigation">
+			<ul class="nav ace-nav">
+				<li class="blue dropdown-modal">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<i class="ace-icon fa fa-tasks"></i>
+						<span class="badge badge-grey">4</span>
+					</a>
+
+					<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+						<li class="dropdown-header">
+							<i class="ace-icon fa fa-check"></i>
+							4 Tasks to complete
+						</li>
+
+						<li class="dropdown-content">
+							<ul class="dropdown-menu dropdown-navbar">
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Software Update</span>
+											<span class="pull-right">65%</span>
+										</div>
+
+										<div class="progress progress-mini">
+											<div style="width:65%" class="progress-bar"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Hardware Upgrade</span>
+											<span class="pull-right">35%</span>
+										</div>
+
+										<div class="progress progress-mini">
+											<div style="width:35%" class="progress-bar progress-bar-danger"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Unit Testing</span>
+											<span class="pull-right">15%</span>
+										</div>
+
+										<div class="progress progress-mini">
+											<div style="width:15%" class="progress-bar progress-bar-warning"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Bug Fixes</span>
+											<span class="pull-right">90%</span>
+										</div>
+
+										<div class="progress progress-mini progress-striped active">
+											<div style="width:90%" class="progress-bar progress-bar-success"></div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="dropdown-footer">
+							<a href="#">
+								See tasks with details
+								<i class="ace-icon fa fa-arrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="light-blue dropdown-modal">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<i class="ace-icon fa fa-bell icon-animated-bell"></i>
+						<span class="badge badge-important">8</span>
+					</a>
+
+					<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+						<li class="dropdown-header">
+							<i class="ace-icon fa fa-exclamation-triangle"></i>
+							8 Notifications
+						</li>
+
+						<li class="dropdown-content">
+							<ul class="dropdown-menu dropdown-navbar navbar-pink">
+								<li>
+									<a href="#">
+										<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+														New Comments
+													</span>
+											<span class="pull-right badge badge-info">+12</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="btn btn-xs btn-primary fa fa-user"></i>
+										Bob just signed up as an editor ...
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+														New Orders
+													</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+														Followers
+													</span>
+											<span class="pull-right badge badge-info">+11</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="dropdown-footer">
+							<a href="#">
+								See all notifications
+								<i class="ace-icon fa fa-arrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="blue dropdown-modal">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+						<span class="badge badge-success">5</span>
+					</a>
+
+					<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+						<li class="dropdown-header">
+							<i class="ace-icon fa fa-envelope-o"></i>
+							5 Messages
+						</li>
+
+						<li class="dropdown-content">
+							<ul class="dropdown-menu dropdown-navbar">
+								<li>
+									<a href="#" class="clearfix">
+										<img src="assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Alex:</span>
+														Ciao sociis natoque penatibus et auctor ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>a moment ago</span>
+													</span>
+												</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="clearfix">
+										<img src="assets/images/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+										<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Susan:</span>
+														Vestibulum id ligula porta felis euismod ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>20 minutes ago</span>
+													</span>
+												</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="clearfix">
+										<img src="assets/images/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+										<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Bob:</span>
+														Nullam quis risus eget urna mollis ornare ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>3:15 pm</span>
+													</span>
+												</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="clearfix">
+										<img src="assets/images/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
+										<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Kate:</span>
+														Ciao sociis natoque eget urna mollis ornare ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>1:33 pm</span>
+													</span>
+												</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="clearfix">
+										<img src="assets/images/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
+										<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Fred:</span>
+														Vestibulum id penatibus et auctor  ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>10:09 am</span>
+													</span>
+												</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="dropdown-footer">
+							<a href="inbox.html">
+								See all messages
+								<i class="ace-icon fa fa-arrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="light-blue dropdown-modal">
+					<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+						<img class="nav-user-photo" src="assets/images/avatars/kenya.png" alt="county" />
+						<span class="user-info">
+									<small>Welcome,</small>
+									Admin
+								</span>
+
+						<i class="ace-icon fa fa-caret-down"></i>
+					</a>
+
+					<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+						<li>
+							<a href="#">
+								<i class="ace-icon fa fa-cog"></i>
+								Settings
+							</a>
+						</li>
+
+						<li>
+							<a href="profile.html">
+								<i class="ace-icon fa fa-user"></i>
+								Profile
+							</a>
+						</li>
+
+						<li class="divider"></li>
+
+						<li>
+							<a href="#">
+								<i class="ace-icon fa fa-power-off"></i>
+								Logout
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div><!-- /.navbar-container -->
+</div>
+
+<div class="main-container ace-save-state" id="main-container">
+	<script type="text/javascript">
+        try{ace.settings.loadState('main-container')}catch(e){}
+	</script>
+
+	<div id="sidebar" class="sidebar responsive        ace-save-state">
+		<script type="text/javascript">
+            try{ace.settings.loadState('sidebar')}catch(e){}
+		</script>
+
+		<ul class="nav nav-list">
+			<li class="active">
+				<a href="index.html">
+					<i class="menu-icon fa fa-tachometer"></i>
+					<span class="menu-text"> Dashboard </span>
+				</a>
+
+				<b class="arrow"></b>
+			</li>
+
+			<li class="">
+				<a href="#" class="dropdown-toggle">
+					<i class="menu-icon fa fa-desktop"></i>
+					<span class="menu-text">
+								Revenue Summary
+							</span>
+
+					<b class="arrow fa fa-angle-down"></b>
+				</a>
+
+				<b class="arrow"></b>
+
+				<ul class="submenu">
+
+					<li class="">
+						<a href="utilities.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Utilities
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="rents.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Rents
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="parking.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Parking Fee
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="content-slider.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Tourism
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="business.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Business Permits
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="land.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Land Rates
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="others.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Others
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+				</ul>
+			</li>
+
+			<li class="">
+				<a href="projects.html">
+					<i class="menu-icon fa fa-list-alt"></i>
+					<span class="menu-text">Projects</span>
+				</a>
+
+				<b class="arrow"></b>
+			</li>
+
+			<li class="">
+				<a href="calendar.html">
+					<i class="menu-icon fa fa-calendar"></i>
+
+					<span class="menu-text">
+								Calendar
+
+								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
+									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
+								</span>
+							</span>
+				</a>
+
+				<b class="arrow"></b>
+			</li>
+
+			<b class="arrow"></b>
+			</li>
+
+			<li class="">
+				<a href="#" class="dropdown-toggle">
+					<i class="menu-icon fa fa-tag"></i>
+					<span class="menu-text">More </span>
+
+					<b class="arrow fa fa-angle-down"></b>
+				</a>
+
+				<b class="arrow"></b>
+
+				<ul class="submenu">
+					<li class="">
+						<a href="settings.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Settings
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="profile.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							User Profile
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="inbox.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Inbox
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="login.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Login &amp; Register
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+				</ul>
+			</li>
+		</ul><!-- /.nav-list -->
+
+		<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+			<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+		</div>
+	</div>
+
+	<div class="main-content">
+		<div class="main-content-inner">
+			<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+				<ul class="breadcrumb">
+					<li>
+						<i class="ace-icon fa fa-home home-icon"></i>
+						<a href="#">Home</a>
+					</li>
+					<li class="active">Dashboard</li>
+				</ul><!-- /.breadcrumb -->
+			</div>
+
+			<div class="page-content">
+				<div class="ace-settings-container" id="ace-settings-container">
+					<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+						<i class="ace-icon fa fa-cog bigger-130"></i>
+					</div>
+
+					<div class="ace-settings-box clearfix" id="ace-settings-box">
+						<div class="pull-left width-50">
+							<div class="ace-settings-item">
+								<div class="pull-left">
+									<select id="skin-colorpicker" class="hide">
+										<option data-skin="no-skin" value="#438EB9">#438EB9</option>
+										<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+										<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+										<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+									</select>
+								</div>
+								<span>&nbsp; Choose Skin</span>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" autocomplete="off" />
+								<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" autocomplete="off" />
+								<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" autocomplete="off" />
+								<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" autocomplete="off" />
+								<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" autocomplete="off" />
+								<label class="lbl" for="ace-settings-add-container">
+									Inside
+									<b>.container</b>
+								</label>
+							</div>
+						</div><!-- /.pull-left -->
+
+						<div class="pull-left width-50">
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" />
+								<label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact" autocomplete="off" />
+								<label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight" autocomplete="off" />
+								<label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
+							</div>
+						</div><!-- /.pull-left -->
+					</div><!-- /.ace-settings-box -->
+				</div><!-- /.ace-settings-container -->
+
+				<div class="page-header">
+					<h1>
+						Dashboard
+						<small>
+							<i class="ace-icon fa fa-angle-double-right"></i>
+							overview &amp; stats
+						</small>
+					</h1>
+				</div><!-- /.page-header -->
+
+				<div class="row">
+					<div class="col-xs-12">
+						<!-- PAGE CONTENT BEGINS -->
+
+						<div class="row">
+							<div class="col-sm-12 infobox-container">
+
+								<div class="infobox infobox-blue2" style="height:100px; width:400px;">
+									<div class="infobox-progress">
+										<div class="easy-pie-chart percentage" data-percent="100" data-size="90">
+											<span class="percent">2.5B</span>
+										</div>
+									</div>
+
+
+									<div class="infobox-data" style="float:right;">
+										<span class="infobox-text">Target Collection</span>
+
+										<div class="infobox-content">
+											<span class="bigger-110">~</span>
+											2017/2018
+										</div>
+									</div>
+								</div>
+
+								<div class="infobox infobox-green" style="height:100px; width:400px;">
+									<div class="infobox-progress">
+										<div class="easy-pie-chart percentage" data-percent="30" data-size="90">
+											<span class="percent">20</span>M
+										</div>
+									</div>
+
+									<div class="infobox-data" style="float:right;">
+										<div class="infobox-content">Yearly Collection</div>
+										<div class="infobox-content">Year-to-date</div>
+									</div>
+								</div>
+
+								<div class="infobox infobox-red" style="height:100px; width:400px;">
+									<div class="infobox-progress">
+										<div class="easy-pie-chart percentage" data-percent="20" data-size="90">
+											<span class="percent">10</span>M
+										</div>
+									</div>
+
+									<div class="infobox-data" style="float:right;">
+										<div class="infobox-content">	Monthly Collection</div>
+										<div class="infobox-content">~ January 2018</div>
+									</div>
+								</div>
+
+								<div class="infobox infobox-purple " style="height:100px; width:400px; font-size:30%:">
+									<div class="infobox-progress">
+										<div class="easy-pie-chart percentage" data-percent="4" data-size="90">
+											<span class="percent">4</span>M
+										</div>
+									</div>
+									<div class="vspace-12-sm"></div>
+
+									<div class="infobox-data" style="float:right;">
+										<div class="infobox-content">Daily Collection</div>
+										<div class="infobox-content">~Monday</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="vspace-12-sm"></div>
+						<div class="row">
+
+							<div class="widget-box">
+								<div class="widget-header widget-header-flat widget-header">
+									<h5 class="widget-title">
+										<i class="ace-icon fa fa-signal"></i>
+										Revenue Statistics
+									</h5>
+									<div class="widget-toolbar no-border">
+										<div class="inline dropdown-hover">
+											<button class="btn btn-minier btn-primary">
+												Today
+												<i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
+											</button>
+
+											<ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
+												<li class="active">
+													<a href="#" class="blue">
+														<i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
+														Today
+													</a>
+												</li>
+
+												<li>
+													<a href="#">
+														<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+														This Week
+													</a>
+												</li>
+
+												<li>
+													<a href="#">
+														<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+														This Month
+													</a>
+												</li>
+
+												<li>
+													<a href="#">
+														<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+														This Year
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="widget-body">
+									<div class="widget-main">
+										<div class="col-sm-7">
+											<div id="chartdiv"></div>
+										</div>
+										<div class="col-sm-5 infobox-container">
+											<div id="chartdiv1"></div>
+										</div>
+
+										<div class="hr hr8 hr-double"></div>
+
+										<div class="clearfix">
+											<div class="grid3">
+															<span class="grey">
+																<button class="btn btn-success">
+																	<i class="ace-icon fa fa-signal"></i>
+																</button>
+																	&nbsp; Expected Revenue
+															</span>
+												<h4 class="bigger pull-right">Ksh.3M</h4>
+											</div>
+
+											<div class="grid3">
+															<span class="grey">
+																<button class="btn btn-primary">
+																	<i class="ace-icon fa fa-signal"></i>
+																</button>
+																&nbsp; Collected Revenue
+															</span>
+												<h4 class="bigger pull-right">Ksh.2M</h4>
+											</div>
+
+											<div class="grid3">
+															<span class="grey">
+																<button class="btn btn-danger">
+																	<i class="ace-icon fa fa-signal"></i>
+																</button>
+																&nbsp; Pending Amount
+															</span>
+												<h4 class="bigger pull-right">Ksh.1M</h4>
+											</div>
+										</div>
+									</div><!-- /.widget-main -->
+								</div><!-- /.widget-body -->
+							</div><!-- /.widget-box -->
+
+
+
+						</div><!-- /.row -->
+
+						<div class="hr hr32 hr-dotted"></div>
+
+						<div class="hr hr32 hr-dotted"></div>
+
+						<div class="row">
+							<div class="col-sm-8">
+								<div class="widget-box transparent" id="recent-box">
+									<div class="widget-header">
+										<h4 class="widget-title lighter smaller">
+											<i class="ace-icon fa fa-rss orange"></i>RECENT PROJECTS
+										</h4>
+
+										<div class="widget-toolbar no-border">
+											<ul class="nav nav-tabs" id="recent-tab">
+												<li class="active">
+													<a data-toggle="tab" href="#task-tab">Projects</a>
+												</li>
+
+												<li>
+													<a data-toggle="tab" href="#member-tab">Members</a>
+												</li>
+
+												<li>
+													<a data-toggle="tab" href="#comment-tab">Comments</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="widget-body">
+										<div class="widget-main padding-4">
+											<div class="tab-content padding-8">
+												<div id="task-tab" class="tab-pane active">
+													<ul id="tasks" class="item-list">
+														<li class="item-orange clearfix">
+															<label class="inline">
+																<input type="checkbox" class="ace" />
+																<span class="lbl"> Constructing Free Area Market</span>
+															</label>
+
+															<div class=" easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42">
+																<span class="percent">42</span>%
+															</div>
+															&nbsp;
+															<div class="pull-right pos-rel dropdown-hover">
+																<button class="btn btn-minier bigger btn-primary">
+																	<i class="ace-icon fa fa-cog icon-only bigger-120"></i>
+																</button>
+
+																<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-caret dropdown-close dropdown-menu-right">
+																	<li>
+																		<a href="#" class="blue">
+																			<i class="ace-icon fa fa-pencil bigger-130"></i>
+																		</a>
+																	</li>
+
+																	<li>
+																		<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																					<span class="red">
+																						<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																					</span>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+
+														</li>
+
+														<li class="item-red clearfix">
+															<label class="inline">
+																<input type="checkbox" class="ace" />
+																<span class="lbl">Construction of the main highway</span>
+															</label>
+															<div class=" easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="20">
+																<span class="percent">20</span>%
+															</div>
+
+															<div class="pull-right action-buttons">
+																<a href="#" class="blue">
+																	<i class="ace-icon fa fa-pencil bigger-130"></i>
+																</a>
+
+																<span class="vbar"></span>
+
+																<a href="#" class="red">
+																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
+																</a>
+															</div>
+														</li>
+
+														<li class="item-default clearfix">
+															<label class="inline">
+																<input type="checkbox" class="ace" />
+																<span class="lbl"> Renovation of district hospital.</span>
+															</label>
+															<div class=" easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="40">
+																<span class="percent">40</span>%
+															</div>
+
+															<div class="pull-right pos-rel dropdown-hover">
+																<button class="btn btn-minier bigger btn-primary">
+																	<i class="ace-icon fa fa-cog icon-only bigger-120"></i>
+																</button>
+
+																<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-caret dropdown-close dropdown-menu-right">
+																	<li>
+																		<a href="#" class="blue">
+																			<i class="ace-icon fa fa-pencil bigger-130"></i>
+																		</a>
+																	</li>
+
+																	<li>
+																		<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																					<span class="red">
+																						<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																					</span>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</li>
+
+														<li class="item-blue clearfix">
+															<label class="inline">
+																<input type="checkbox" class="ace" />
+																<span class="lbl">Lighting the main streets.</span>
+															</label>
+															<div class=" easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="10">
+																<span class="percent">10</span>%
+															</div>
+
+															<div class="pull-right pos-rel dropdown-hover">
+																<button class="btn btn-minier bigger btn-primary">
+																	<i class="ace-icon fa fa-cog icon-only bigger-120"></i>
+																</button>
+
+																<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-caret dropdown-close dropdown-menu-right">
+																	<li>
+																		<a href="#" class="blue">
+																			<i class="ace-icon fa fa-pencil bigger-130"></i>
+																		</a>
+																	</li>
+
+																	<li>
+																		<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																					<span class="red">
+																						<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																					</span>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</li>
+
+														<li class="item-grey clearfix">
+															<label class="inline">
+																<input type="checkbox" class="ace" />
+																<span class="lbl">Cleaning up of drainage system.</span>
+															</label>
+
+															<div class=" easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="5">
+																<span class="percent">5</span>%
+															</div>
+
+															<div class="pull-right pos-rel dropdown-hover">
+																<button class="btn btn-minier bigger btn-primary">
+																	<i class="ace-icon fa fa-cog icon-only bigger-120"></i>
+																</button>
+
+																<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-caret dropdown-close dropdown-menu-right">
+																	<li>
+																		<a href="#" class="blue">
+																			<i class="ace-icon fa fa-pencil bigger-130"></i>
+																		</a>
+																	</li>
+
+																	<li>
+																		<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																					<span class="red">
+																						<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																					</span>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+
+												<div id="member-tab" class="tab-pane">
+													<div class="clearfix">
+														<div class="itemdiv memberdiv">
+															<div class="user">
+																<img alt="Bob Doe's avatar" src="assets/images/avatars/user.jpg" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Bob Doe</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">20 min</span>
+																</div>
+
+																<div>
+																	<span class="label label-warning label-sm">pending</span>
+
+																	<div class="inline position-relative">
+																		<button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																			<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+																		</button>
+
+																		<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																			<li>
+																				<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																							<span class="green">
+																								<i class="ace-icon fa fa-check bigger-110"></i>
+																							</span>
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																							<span class="orange">
+																								<i class="ace-icon fa fa-times bigger-110"></i>
+																							</span>
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																							<span class="red">
+																								<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																							</span>
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv memberdiv">
+															<div class="user">
+																<img alt="Joe Doe's avatar" src="assets/images/avatars/avatar2.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Joe Doe</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">1 hour</span>
+																</div>
+
+																<div>
+																	<span class="label label-warning label-sm">pending</span>
+
+																	<div class="inline position-relative">
+																		<button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																			<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+																		</button>
+
+																		<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																			<li>
+																				<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																							<span class="green">
+																								<i class="ace-icon fa fa-check bigger-110"></i>
+																							</span>
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																							<span class="orange">
+																								<i class="ace-icon fa fa-times bigger-110"></i>
+																							</span>
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																							<span class="red">
+																								<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																							</span>
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv memberdiv">
+															<div class="user">
+																<img alt="Jim Doe's avatar" src="assets/images/avatars/avatar.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Jim Doe</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">2 hour</span>
+																</div>
+
+																<div>
+																	<span class="label label-warning label-sm">pending</span>
+
+																	<div class="inline position-relative">
+																		<button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																			<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+																		</button>
+
+																		<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																			<li>
+																				<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																							<span class="green">
+																								<i class="ace-icon fa fa-check bigger-110"></i>
+																							</span>
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																							<span class="orange">
+																								<i class="ace-icon fa fa-times bigger-110"></i>
+																							</span>
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																							<span class="red">
+																								<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																							</span>
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv memberdiv">
+															<div class="user">
+																<img alt="Alex Doe's avatar" src="assets/images/avatars/avatar5.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Alex Doe</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">3 hour</span>
+																</div>
+
+																<div>
+																	<span class="label label-danger label-sm">blocked</span>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv memberdiv">
+															<div class="user">
+																<img alt="Bob Doe's avatar" src="assets/images/avatars/avatar2.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Bob Doe</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">6 hour</span>
+																</div>
+
+																<div>
+																	<span class="label label-success label-sm arrowed-in">approved</span>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv memberdiv">
+															<div class="user">
+																<img alt="Susan's avatar" src="assets/images/avatars/avatar3.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Susan</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">yesterday</span>
+																</div>
+
+																<div>
+																	<span class="label label-success label-sm arrowed-in">approved</span>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv memberdiv">
+															<div class="user">
+																<img alt="Phil Doe's avatar" src="assets/images/avatars/avatar4.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Phil Doe</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">2 days ago</span>
+																</div>
+
+																<div>
+																	<span class="label label-info label-sm arrowed-in arrowed-in-right">online</span>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv memberdiv">
+															<div class="user">
+																<img alt="Alexa Doe's avatar" src="assets/images/avatars/avatar1.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Alexa Doe</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">3 days ago</span>
+																</div>
+
+																<div>
+																	<span class="label label-success label-sm arrowed-in">approved</span>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="space-4"></div>
+
+													<div class="center">
+														<i class="ace-icon fa fa-users fa-2x green middle"></i>
+
+														&nbsp;
+														<a href="#" class="btn btn-sm btn-white btn-info">
+															See all members &nbsp;
+															<i class="ace-icon fa fa-arrow-right"></i>
+														</a>
+													</div>
+
+													<div class="hr hr-double hr8"></div>
+												</div><!-- /.#member-tab -->
+
+												<div id="comment-tab" class="tab-pane">
+													<div class="comments">
+														<div class="itemdiv commentdiv">
+															<div class="user">
+																<img alt="Bob Doe's Avatar" src="assets/images/avatars/avatar.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Bob Doe</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">6 min</span>
+																</div>
+
+																<div class="text">
+																	<i class="ace-icon fa fa-quote-left"></i>
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+																</div>
+															</div>
+
+															<div class="tools">
+																<div class="inline position-relative">
+																	<button class="btn btn-minier bigger btn-yellow dropdown-toggle" data-toggle="dropdown">
+																		<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+																	</button>
+
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																						<span class="green">
+																							<i class="ace-icon fa fa-check bigger-110"></i>
+																						</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																						<span class="orange">
+																							<i class="ace-icon fa fa-times bigger-110"></i>
+																						</span>
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																						<span class="red">
+																							<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																						</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv commentdiv">
+															<div class="user">
+																<img alt="Jennifer's Avatar" src="assets/images/avatars/avatar1.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Jennifer</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="blue">15 min</span>
+																</div>
+
+																<div class="text">
+																	<i class="ace-icon fa fa-quote-left"></i>
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+																</div>
+															</div>
+
+															<div class="tools">
+																<div class="action-buttons bigger-125">
+																	<a href="#">
+																		<i class="ace-icon fa fa-pencil blue"></i>
+																	</a>
+
+																	<a href="#">
+																		<i class="ace-icon fa fa-trash-o red"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv commentdiv">
+															<div class="user">
+																<img alt="Joe's Avatar" src="assets/images/avatars/avatar2.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Joe</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="orange">22 min</span>
+																</div>
+
+																<div class="text">
+																	<i class="ace-icon fa fa-quote-left"></i>
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+																</div>
+															</div>
+
+															<div class="tools">
+																<div class="action-buttons bigger-125">
+																	<a href="#">
+																		<i class="ace-icon fa fa-pencil blue"></i>
+																	</a>
+
+																	<a href="#">
+																		<i class="ace-icon fa fa-trash-o red"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv commentdiv">
+															<div class="user">
+																<img alt="Rita's Avatar" src="assets/images/avatars/avatar3.png" />
+															</div>
+
+															<div class="body">
+																<div class="name">
+																	<a href="#">Rita</a>
+																</div>
+
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="red">50 min</span>
+																</div>
+
+																<div class="text">
+																	<i class="ace-icon fa fa-quote-left"></i>
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+																</div>
+															</div>
+
+															<div class="tools">
+																<div class="action-buttons bigger-125">
+																	<a href="#">
+																		<i class="ace-icon fa fa-pencil blue"></i>
+																	</a>
+
+																	<a href="#">
+																		<i class="ace-icon fa fa-trash-o red"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="hr hr8"></div>
+
+													<div class="center">
+														<i class="ace-icon fa fa-comments-o fa-2x green middle"></i>
+
+														&nbsp;
+														<a href="#" class="btn btn-sm btn-white btn-info">
+															See all comments &nbsp;
+															<i class="ace-icon fa fa-arrow-right"></i>
+														</a>
+													</div>
+
+													<div class="hr hr-double hr8"></div>
+												</div>
+											</div>
+										</div><!-- /.widget-main -->
+									</div><!-- /.widget-body -->
+								</div><!-- /.widget-box -->
+							</div><!-- /.col -->
+							<div class="col-sm-4">
+								<div class="profile-skills">
+									<h4 class="widget-title lighter smaller">
+										<i class="ace-icon fa fa-rss orange"></i>Projects Progress
+									</h4></br>
+									<div class="progress">
+										<div class="progress-bar" style="width:80%; height:200px;">
+
+											<span class="pull-left">Total Projects</span>
+											<span class="pull-right">1091</span>
+										</div>
+									</div>
+
+									<div class="progress">
+										<div class="progress-bar progress-bar-success" style="width:72%">
+											<span class="pull-left">Ongoing projects</span>
+
+											<span class="pull-right">941</span>
+										</div>
+									</div>
+
+									<div class="progress">
+										<div class="progress-bar progress-bar-purple" style="width:60%">
+											<span class="pull-left">Pending Projects</span>
+
+											<span class="pull-right">350</span>
+										</div>
+									</div>
+
+									<div class="progress">
+										<div class="progress-bar progress-bar-warning" style="width:50%">
+											<span class="pull-left">Complete Projects</span>
+
+											<span class="pull-right">150</span>
+										</div>
+									</div>
+
+									<div class="progress" style="height:30px;">
+										<div class="progress-bar progress-bar-danger" style="width:38%">
+											<span class="pull-left">Launched Projects</span>
+
+											<span class="pull-right">100</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- /.row -->
+
+						<!-- PAGE CONTENT ENDS -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.page-content -->
+		</div>
+	</div><!-- /.main-content -->
+
+	<div class="footer">
+		<div class="footer-inner">
+			<div class="footer-content">
+						<span class="bigger-120">
+							<span class="blue bolder">Revenue Sure</span>
+							Application &copy; 2018
+						</span>
+
+				&nbsp; &nbsp;
+				<span class="action-buttons">
+							<a href="#">
+								<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+							</a>
+
+							<a href="#">
+								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+							</a>
+
+							<a href="#">
+								<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+							</a>
+						</span>
+			</div>
+		</div>
+	</div>
+
+	<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+		<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+	</a>
+</div><!-- /.main-container -->
+
+<!-- basic scripts -->
+
+<!--[if !IE]> -->
+<script src="assets/js/jquery-2.1.4.min.js"></script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+
+<!--[if lte IE 8]>
+<script src="assets/js/excanvas.min.js"></script>
+<![endif]-->
+<script src="assets/js/jquery-ui.custom.min.js"></script>
+<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="assets/js/jquery.easypiechart.min.js"></script>
+<script src="assets/js/jquery.sparkline.index.min.js"></script>
+<script src="assets/js/jquery.flot.min.js"></script>
+<script src="assets/js/jquery.flot.pie.min.js"></script>
+<script src="assets/js/jquery.flot.resize.min.js"></script>
+
+<!-- ace scripts -->
+<script src="assets/js/ace-elements.min.js"></script>
+<script src="assets/js/ace.min.js"></script>
+
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    jQuery(function($) {
+        $('.easy-pie-chart.percentage').each(function(){
+            var $box = $(this).closest('.infobox');
+            var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+            var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+            var size = parseInt($(this).data('size')) || 50;
+            $(this).easyPieChart({
+                barColor: barColor,
+                trackColor: trackColor,
+                scaleColor: false,
+                lineCap: 'butt',
+                lineWidth: parseInt(size/5),
+                animate: ace.vars['old_ie'] ? false : 1000,
+                size: size
+            });
+        })
+
+        $('.sparkline').each(function(){
+            var $box = $(this).closest('.infobox');
+            var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+            $(this).sparkline('html',
+                {
+                    tagValuesAttribute:'data-values',
+                    type: 'bar',
+                    barColor: barColor ,
+                    chartRangeMin:$(this).data('min') || 0
+                });
+        });
+
+
+        //flot chart resize plugin, somehow manipulates default browser resize event to optimize it!
+        //but sometimes it brings up errors with normal resize event handlers
+        $.resize.throttleWindow = false;
+
+        var chart = AmCharts.makeChart("chartdiv1", {
+            "type": "serial",
+            "theme": "light",
+            "marginRight": 70,
+            "dataProvider": [{
+                "revenue": "Utilities",
+                "amount": 3025,
+                "color": "#FF0F00"
+            }, {
+                "revenue": "Rents",
+                "amount": 1882,
+                "color": "#FF6600"
+            }, {
+                "revenue": "Parking",
+                "amount": 1809,
+                "color": "#FF9E01"
+            }, {
+                "revenue": "Permits",
+                "amount": 1322,
+                "color": "#FCD202"
+            }, {
+                "revenue": "Land Rates",
+                "amount": 1122,
+                "color": "#F8FF01"
+            }, {
+                "revenue": "Tourism",
+                "amount": 1114,
+                "color": "#B0DE09"
+            }, {
+                "revenue": "Others",
+                "amount": 984,
+                "color": "#04D215"
+            }],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "title": "Revenue Collected"
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "balloonText": "<b>[[category]]: [[value]]</b>",
+                "fillColorsField": "color",
+                "fillAlphas": 0.9,
+                "lineAlpha": 0.2,
+                "type": "column",
+                "valueField": "amount"
+            }],
+            "chartCursor": {
+                "categoryBalloonEnabled": false,
+                "cursorAlpha": 0,
+                "zoomable": false
+            },
+            "categoryField": "revenue",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "labelRotation": 45
+            },
+            "export": {
+                "enabled": true
+            }
+
+        });
+
+
+        /**
+         * Define data for each year
+         */
+        var chartData = {
+            "1995": [
+                { "sector": "Agriculture", "size": 6.6 },
+                { "sector": "Mining and Quarrying", "size": 0.6 },
+                { "sector": "Manufacturing", "size": 23.2 },
+                { "sector": "Electricity and Water", "size": 2.2 },
+                { "sector": "Construction", "size": 4.5 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 14.6 },
+                { "sector": "Transport and Communication", "size": 9.3 },
+                { "sector": "Finance, real estate and business services", "size": 22.5 } ],
+            "1996": [
+                { "sector": "Agriculture", "size": 6.4 },
+                { "sector": "Mining and Quarrying", "size": 0.5 },
+                { "sector": "Manufacturing", "size": 22.4 },
+                { "sector": "Electricity and Water", "size": 2 },
+                { "sector": "Construction", "size": 4.2 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 14.8 },
+                { "sector": "Transport and Communication", "size": 9.7 },
+                { "sector": "Finance, real estate and business services", "size": 22 } ],
+            "1997": [
+                { "sector": "Agriculture", "size": 6.1 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 20.9 },
+                { "sector": "Electricity and Water", "size": 1.8 },
+                { "sector": "Construction", "size": 4.2 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 13.7 },
+                { "sector": "Transport and Communication", "size": 9.4 },
+                { "sector": "Finance, real estate and business services", "size": 22.1 } ],
+            "1998": [
+                { "sector": "Agriculture", "size": 6.2 },
+                { "sector": "Mining and Quarrying", "size": 0.3 },
+                { "sector": "Manufacturing", "size": 21.4 },
+                { "sector": "Electricity and Water", "size": 1.9 },
+                { "sector": "Construction", "size": 4.2 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 14.5 },
+                { "sector": "Transport and Communication", "size": 10.6 },
+                { "sector": "Finance, real estate and business services", "size": 23 } ],
+            "1999": [
+                { "sector": "Agriculture", "size": 5.7 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 20 },
+                { "sector": "Electricity and Water", "size": 1.8 },
+                { "sector": "Construction", "size": 4.4 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 15.2 },
+                { "sector": "Transport and Communication", "size": 10.5 },
+                { "sector": "Finance, real estate and business services", "size": 24.7 } ],
+            "2000": [
+                { "sector": "Agriculture", "size": 5.1 },
+                { "sector": "Mining and Quarrying", "size": 0.3 },
+                { "sector": "Manufacturing", "size": 20.4 },
+                { "sector": "Electricity and Water", "size": 1.7 },
+                { "sector": "Construction", "size": 4 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 16.3 },
+                { "sector": "Transport and Communication", "size": 10.7 },
+                { "sector": "Finance, real estate and business services", "size": 24.6 } ],
+            "2001": [
+                { "sector": "Agriculture", "size": 5.5 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 20.3 },
+                { "sector": "Electricity and Water", "size": 1.6 },
+                { "sector": "Construction", "size": 3.1 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 16.3 },
+                { "sector": "Transport and Communication", "size": 10.7 },
+                { "sector": "Finance, real estate and business services", "size": 25.8 } ],
+            "2002": [
+                { "sector": "Agriculture", "size": 5.7 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 20.5 },
+                { "sector": "Electricity and Water", "size": 1.6 },
+                { "sector": "Construction", "size": 3.6 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 16.1 },
+                { "sector": "Transport and Communication", "size": 10.7 },
+                { "sector": "Finance, real estate and business services", "size": 26 } ],
+            "2003": [
+                { "sector": "Agriculture", "size": 4.9 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 19.4 },
+                { "sector": "Electricity and Water", "size": 1.5 },
+                { "sector": "Construction", "size": 3.3 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 16.2 },
+                { "sector": "Transport and Communication", "size": 11 },
+                { "sector": "Finance, real estate and business services", "size": 27.5 } ],
+            "2004": [
+                { "sector": "Agriculture", "size": 4.7 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 18.4 },
+                { "sector": "Electricity and Water", "size": 1.4 },
+                { "sector": "Construction", "size": 3.3 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 16.9 },
+                { "sector": "Transport and Communication", "size": 10.6 },
+                { "sector": "Finance, real estate and business services", "size": 28.1 } ],
+            "2005": [
+                { "sector": "Agriculture", "size": 4.3 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 18.1 },
+                { "sector": "Electricity and Water", "size": 1.4 },
+                { "sector": "Construction", "size": 3.9 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 15.7 },
+                { "sector": "Transport and Communication", "size": 10.6 },
+                { "sector": "Finance, real estate and business services", "size": 29.1 } ],
+            "2006": [
+                { "sector": "Agriculture", "size": 4 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 16.5 },
+                { "sector": "Electricity and Water", "size": 1.3 },
+                { "sector": "Construction", "size": 3.7 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 14.2 },
+                { "sector": "Transport and Communication", "size": 12.1 },
+                { "sector": "Finance, real estate and business services", "size": 29.1 } ],
+            "2007": [
+                { "sector": "Agriculture", "size": 4.7 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 16.2 },
+                { "sector": "Electricity and Water", "size": 1.2 },
+                { "sector": "Construction", "size": 4.1 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 15.6 },
+                { "sector": "Transport and Communication", "size": 11.2 },
+                { "sector": "Finance, real estate and business services", "size": 30.4 } ],
+            "2008": [
+                { "sector": "Agriculture", "size": 4.9 },
+                { "sector": "Mining and Quarrying", "size": 0.3 },
+                { "sector": "Manufacturing", "size": 17.2 },
+                { "sector": "Electricity and Water", "size": 1.4 },
+                { "sector": "Construction", "size": 5.1 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 15.4 },
+                { "sector": "Transport and Communication", "size": 11.1 },
+                { "sector": "Finance, real estate and business services", "size": 28.4 } ],
+            "2009": [
+                { "sector": "Agriculture", "size": 4.7 },
+                { "sector": "Mining and Quarrying", "size": 0.3 },
+                { "sector": "Manufacturing", "size": 16.4 },
+                { "sector": "Electricity and Water", "size": 1.9 },
+                { "sector": "Construction", "size": 4.9 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 15.5 },
+                { "sector": "Transport and Communication", "size": 10.9 },
+                { "sector": "Finance, real estate and business services", "size": 27.9 } ],
+            "2010": [
+                { "sector": "Agriculture", "size": 4.2 },
+                { "sector": "Mining and Quarrying", "size": 0.3 },
+                { "sector": "Manufacturing", "size": 16.2 },
+                { "sector": "Electricity and Water", "size": 2.2 },
+                { "sector": "Construction", "size": 4.3 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 15.7 },
+                { "sector": "Transport and Communication", "size": 10.2 },
+                { "sector": "Finance, real estate and business services", "size": 28.8 } ],
+            "2011": [
+                { "sector": "Agriculture", "size": 4.1 },
+                { "sector": "Mining and Quarrying", "size": 0.3 },
+                { "sector": "Manufacturing", "size": 14.9 },
+                { "sector": "Electricity and Water", "size": 2.3 },
+                { "sector": "Construction", "size": 5 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 17.3 },
+                { "sector": "Transport and Communication", "size": 10.2 },
+                { "sector": "Finance, real estate and business services", "size": 27.2 } ],
+            "2012": [
+                { "sector": "Agriculture", "size": 3.8 },
+                { "sector": "Mining and Quarrying", "size": 0.3 },
+                { "sector": "Manufacturing", "size": 14.9 },
+                { "sector": "Electricity and Water", "size": 2.6 },
+                { "sector": "Construction", "size": 5.1 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 15.8 },
+                { "sector": "Transport and Communication", "size": 10.7 },
+                { "sector": "Finance, real estate and business services", "size": 28 } ],
+            "2013": [
+                { "sector": "Agriculture", "size": 3.7 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 14.9 },
+                { "sector": "Electricity and Water", "size": 2.7 },
+                { "sector": "Construction", "size": 5.7 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 16.5 },
+                { "sector": "Transport and Communication", "size": 10.5 },
+                { "sector": "Finance, real estate and business services", "size": 26.6 } ],
+            "2014": [
+                { "sector": "Agriculture", "size": 3.9 },
+                { "sector": "Mining and Quarrying", "size": 0.2 },
+                { "sector": "Manufacturing", "size": 14.5 },
+                { "sector": "Electricity and Water", "size": 2.7 },
+                { "sector": "Construction", "size": 5.6 },
+                { "sector": "Trade (Wholesale, Retail, Motor)", "size": 16.6 },
+                { "sector": "Transport and Communication", "size": 10.5 },
+                { "sector": "Finance, real estate and business services", "size": 26.5 } ]
+        };
+
+
+        /**
+         * Create the chart
+         */
+        var currentYear = 1995;
+        var chart = AmCharts.makeChart( "chartdiv", {
+            "type": "pie",
+            "theme": "light",
+            "dataProvider": [],
+            "valueField": "size",
+            "titleField": "sector",
+            "startDuration": 0,
+            "innerRadius": 80,
+            "pullOutRadius": 20,
+            "marginTop": 30,
+            "titles": [{
+                "text": "Revenue Statistics Over Years"
+            }],
+            "allLabels": [{
+                "y": "54%",
+                "align": "center",
+                "size": 25,
+                "bold": true,
+                "text": "1995",
+                "color": "#555"
+            }, {
+                "y": "49%",
+                "align": "center",
+                "size": 15,
+                "text": "Year",
+                "color": "#555"
+            }],
+            "listeners": [ {
+                "event": "init",
+                "method": function( e ) {
+                    var chart = e.chart;
+
+                    function getCurrentData() {
+                        var data = chartData[currentYear];
+                        currentYear++;
+                        if (currentYear > 2014)
+                            currentYear = 1995;
+                        return data;
+                    }
+
+                    function loop() {
+                        chart.allLabels[0].text = currentYear;
+                        var data = getCurrentData();
+                        chart.animateData( data, {
+                            duration: 1000,
+                            complete: function() {
+                                setTimeout( loop, 3000 );
+                            }
+                        } );
+                    }
+
+                    loop();
+                }
+            } ],
+            "export": {
+                "enabled": true
+            }
+        } );
+
+
+        /**
+         we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
+         so that's not needed actually.
+         */
+        placeholder.data('chart', data);
+        placeholder.data('draw', drawPieChart);
+
+
+        //pie chart tooltip example
+        var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
+        var previousPoint = null;
+
+        placeholder.on('plothover', function (event, pos, item) {
+            if(item) {
+                if (previousPoint != item.seriesIndex) {
+                    previousPoint = item.seriesIndex;
+                    var tip = item.series['label'] + " : " + item.series['percent']+'%';
+                    $tooltip.show().children(0).text(tip);
+                }
+                $tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+            } else {
+                $tooltip.hide();
+                previousPoint = null;
+            }
+
+        });
+
+        /////////////////////////////////////
+        $(document).one('ajaxloadstart.page', function(e) {
+            $tooltip.remove();
+        });
+
+
+
+
+        var d1 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.5) {
+            d1.push([i, Math.sin(i)]);
+        }
+
+        var d2 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.5) {
+            d2.push([i, Math.cos(i)]);
+        }
+
+        var d3 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.2) {
+            d3.push([i, Math.tan(i)]);
+        }
+
+
+        var sales_charts = $('#sales-charts').css({'width':'100%' , 'height':'220px'});
+        $.plot("#sales-charts", [
+            { label: "Domains", data: d1 },
+            { label: "Hosting", data: d2 },
+            { label: "Services", data: d3 }
+        ], {
+            hoverable: true,
+            shadowSize: 0,
+            series: {
+                lines: { show: true },
+                points: { show: true }
+            },
+            xaxis: {
+                tickLength: 0
+            },
+            yaxis: {
+                ticks: 10,
+                min: -2,
+                max: 2,
+                tickDecimals: 3
+            },
+            grid: {
+                backgroundColor: { colors: [ "#fff", "#fff" ] },
+                borderWidth: 1,
+                borderColor:'#555'
+            }
+        });
+
+
+        $('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+        function tooltip_placement(context, source) {
+            var $source = $(source);
+            var $parent = $source.closest('.tab-content')
+            var off1 = $parent.offset();
+            var w1 = $parent.width();
+
+            var off2 = $source.offset();
+            //var w2 = $source.width();
+
+            if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+            return 'left';
+        }
+
+
+        $('.dialogs,.comments').ace_scroll({
+            size: 300
+        });
+
+
+        //Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+        //so disable dragging when clicking on label
+        var agent = navigator.userAgent.toLowerCase();
+        if(ace.vars['touch'] && ace.vars['android']) {
+            $('#tasks').on('touchstart', function(e){
+                var li = $(e.target).closest('#tasks li');
+                if(li.length == 0)return;
+                var label = li.find('label.inline').get(0);
+                if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+            });
+        }
+
+        $('#tasks').sortable({
+                opacity:0.8,
+                revert:true,
+                forceHelperSize:true,
+                placeholder: 'draggable-placeholder',
+                forcePlaceholderSize:true,
+                tolerance:'pointer',
+                stop: function( event, ui ) {
+                    //just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+                    $(ui.item).css('z-index', 'auto');
+                }
+            }
+        );
+        $('#tasks').disableSelection();
+        $('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+            if(this.checked) $(this).closest('li').addClass('selected');
+            else $(this).closest('li').removeClass('selected');
+        });
+        $('#tasks').disableSelection();
+        $('#tasks input:checkbox').removeAttr('checked').on('click', function(){})
+
+
+        //show the dropdowns on top or bottom depending on window height and menu position
+        $('#task-tab .dropdown-hover').on('mouseenter', function(e) {
+            var offset = $(this).offset();
+
+            var $w = $(window);
+            if (offset.top > $w.scrollTop() + $w.innerHeight() - 100)
+                $(this).addClass('dropup');
+            else $(this).removeClass('dropup');
+        });
+
+    })
+</script>
+</body>
+</html>
