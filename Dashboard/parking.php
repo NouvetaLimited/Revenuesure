@@ -1,3 +1,10 @@
+<?php
+
+
+include "../api/index.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -364,6 +371,7 @@
 						<i class="menu-icon fa fa-desktop"></i>
 						<span class="menu-text">
 								Revenue Summary
+
 							</span>
 
 						<b class="arrow fa fa-angle-down"></b>
@@ -529,7 +537,8 @@
 						<li>
 							<a href="#">Revenue Summary</a>
 						</li>
-						<li class="active">Parking Fee</li>
+						<li class="active">Parking Fee
+                            </li>
 					</ul><!-- /.breadcrumb -->
 				</div>
 
@@ -657,7 +666,7 @@
 												<td>{{income.mode}}</td>
 
 												<td class="hidden-480">
-													<div class="progress pos-rel" data-percent="40%">
+													<div class="progress pos-rel" data-percent="100%">
 														<div class="progress-bar" style="width:40%;"></div>
 													</div>
 												</td>
@@ -1119,3 +1128,4 @@
         }
     })
 </script>
+z-
