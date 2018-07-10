@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>Utilities -Revenue Sure</title>
+		<title>Miscelleneous -Revenue Sure</title>
 
 		<meta name="description" content="Static &amp; Dynamic Tables" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -374,9 +374,9 @@
 						<ul class="submenu">
 
 							<li class="active">
-								<a href="utilities.html">
+								<a href="Miscelleneous.html">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Utilities
+									Miscelleneous
 								</a>
 
 								<b class="arrow"></b>
@@ -530,7 +530,7 @@
 							<li>
 								<a href="#">Revenue Summary</a>
 							</li>
-							<li class="active">Utilities</li>
+							<li class="active">Miscelleneous</li>
 						</ul><!-- /.breadcrumb -->
 					</div>
 
@@ -604,7 +604,7 @@
 
 						<div class="page-header">
 							<h1>
-								Utilities
+								Miscelleneous
 							</h1>
 						</div><!-- /.page-header -->
 
@@ -1090,8 +1090,8 @@
                 getMonthlyIncome: function(){
                     var app = this;
                     var formData = new FormData;
-                    formData.append('function', 'UtilitiesMonthly');
-                    axios.post('http://localhost/rcounty/api/index.php?function=UtilitiesMonthly')
+                    formData.append('function', 'MiscelleneousMonthly');
+                    axios.post('http://localhost/rcounty/api/index.php?function=MiscelleneousMonthly')
                         .then(function (response) {
                             console.log(response)
                             app.monthlyIncome = response.data

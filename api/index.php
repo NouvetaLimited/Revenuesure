@@ -276,7 +276,7 @@ if($function=='utility'){
     exit();
 
 }
-if($function=='UtilitiesMonthly'){
+if($function=='MiscelleneousMonthly'){
 
     $sql = "SELECT DATE_FORMAT(`payments`.`Date`,'%M%Y') as Day, `utilites`.`Type_of_utility`, SUM(`payments`.`Amount`) as total,payments.Mode  FROM `utilites` LEFT JOIN `payments` ON `utilites`.`Transaction_code`=`payments`.`Transaction_code` WHERE `payments`.`Status` >=1 GROUP BY DATE_FORMAT(`payments`.`Date`,'%M%Y'),`utilites`.`Type_of_utility`,payments.Mode ORDER BY DATE_FORMAT(`payments`.`Date`,'%M%Y') DESC";
 

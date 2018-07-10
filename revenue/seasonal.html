@@ -151,7 +151,7 @@
                                         <span class="title">Renew</span>
                                     </a>
                                 </li>
-                                <li class="nav-item ">
+                                <!-- <li class="nav-item ">
                                     <a href="register.html" class="nav-link ">
                                         <span class="title">Register</span>
                                     </a>
@@ -160,7 +160,7 @@
                                     <a href="permit.html" class="nav-link ">
                                         <span class="title">Permit</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a href="receipt.html" class="nav-link ">
                                         <span class="title">Receipt</span>
@@ -208,7 +208,7 @@
 
                                 <li class="nav-item">
                                     <a href="rr.html" class="nav-link ">
-                                        <span class="title">Receipt</span>
+                                        <span class="title">Reprint Receipt</span>
                                     </a>
                                 </li>
                             </ul>
@@ -245,33 +245,29 @@
                                         <span class="title">Print Receipt</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="clamp.html" class="nav-link ">
                                         <span class="title">Clamping Receipt</span>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
                         <li class="nav-item start ">
                             <a href="#" class="nav-link nav-toggle">
                                 <i class="material-icons">style</i>
-                                <span class="title">Utilities</span>
+                                <span class="title">Miscelleneous</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item   ">
                                     <a href="top.html" class="nav-link ">
-                                        <span class="title">Hospital</span>
+                                        <span class="title">Pay</span>
                                     </a>
                                 </li>
-                                <li class="nav-item ">
-                                    <a href="balance.html" class="nav-link ">
-                                        <span class="title">Electricity</span>
-                                    </a>
-                                </li>
+
                                 <li class="nav-item">
                                     <a href="statement.html" class="nav-link ">
-                                        <span class="title">Water</span>
+                                        <span class="title">Reprint Receipt</span>
                                     </a>
                                 </li>
 
@@ -356,30 +352,54 @@
                                             <div class="offset-md-3 col-md-9">
                                                 <!-- <button type="submit" class="btn btn-info">Pay</button> -->
                                                 <p>
-                                                    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Submit</a>
+                                                    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Mpesa</a>
+                                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Cash</button>
                                                 </p>
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="collapse multi-collapse" id="multiCollapseExample1">
                                                             <div class="card card-body">
-                                                                <input type="text" name="phone" value="" id="phone"  v-model="phoneNumber"
+                                                                <input type="text" name="phone" value="" id="phone" v-model="phoneNumber"
                                                                        placeholder="Enter Phone Number"
                                                                        data-trigger="change"
                                                                        data-validation-minlength="1" data-type="number"
                                                                        data-required="true"
                                                                        data-error-message="Enter a valid number."/>
                                                                 <div>
-                                                                    <button @click="parkingMonthly" class="btn btn-primary" type="button"
+                                                                    <button v-on:click="renewBusinessPermit" class="btn btn-primary" type="button"
                                                                             style="  width:100px; text-align: center; margin-left:0%;margin-top:13px;">
                                                                         Pay
                                                                     </button>
                                                                 </div>
                                                             </div>
                                                         </div>
-
-
+                                                        <div class="col">
+                                                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                                              <div class="card card-body">
+                                                                  <input type="text" name="phone" value="" id="phone" v-model="phoneNumber"
+                                                                         placeholder="Enter Phone Number"
+                                                                         data-trigger="change"
+                                                                         data-validation-minlength="1" data-type="number"
+                                                                         data-required="true"
+                                                                         data-error-message="Enter a valid number."/>
+                                                                  <div>
+                                                                      <button v-on:click="renewBusinessPermit" class="btn btn-primary" type="button"
+                                                                              style="  width:100px; text-align: center; margin-left:0%;margin-top:13px;">
+                                                                          Pay
+                                                                      </button>
+                                                                  </div>
+                                                              </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                                             </div>
                                     </form>
 
@@ -409,8 +429,7 @@
             </div>
         </div>
         <!-- end footer -->
-    </div>
-</div>
+
 <!-- start js include path -->
 <script src="assets/plugins/jquery/jquery.min.js" ></script>
 <script src="assets/plugins/popper/popper.min.js" ></script>
@@ -421,7 +440,7 @@
 <!-- Common js-->
 <script src="assets/js/app.js" ></script>
 <script src="assets/js/layout.js" ></script>
-<script src="assets/js/theme-color.js" ></script>v
+<script src="assets/js/theme-color.js" ></script>
 <!-- Material -->
 <script src="assets/plugins/material/material.min.js"></script>
 <!-- animation -->
@@ -429,7 +448,7 @@
 <!-- end js include path -->
 
 </body>
-</body>
+
 </html>
 <script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
 <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>

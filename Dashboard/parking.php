@@ -382,9 +382,9 @@ include "../api/index.php";
 					<ul class="submenu">
 
 						<li class="">
-							<a href="utilities.html">
+							<a href="Miscelleneous.html">
 								<i class="menu-icon fa fa-caret-right"></i>
-								Utilities
+								Miscelleneous
 							</a>
 
 							<b class="arrow"></b>

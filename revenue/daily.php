@@ -232,11 +232,7 @@ include "../api/index.php";
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a href="penalties.html" class="nav-link ">
-                                        <span class="title">Penalties</span>
-                                    </a>
-                                </li>
+
                                 <li class="nav-item">
                                     <a href="seasonal.html" class="nav-link ">
                                         <span class="title">Seasonal</span>
@@ -247,33 +243,25 @@ include "../api/index.php";
                                         <span class="title">Print Receipt</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="clamp.html" class="nav-link ">
-                                        <span class="title">Clamping Receipt</span>
-                                    </a>
-                                </li>
+
                             </ul>
                         </li>
                         <li class="nav-item start ">
                             <a href="#" class="nav-link nav-toggle">
                                 <i class="material-icons">style</i>
-                                <span class="title">Utilities</span>
+                                <span class="title">Miscelleneous</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item   ">
                                     <a href="top.html" class="nav-link ">
-                                        <span class="title">Hospital</span>
+                                        <span class="title">Pay</span>
                                     </a>
                                 </li>
-                                <li class="nav-item ">
-                                    <a href="balance.html" class="nav-link ">
-                                        <span class="title">Electricity</span>
-                                    </a>
-                                </li>
+
                                 <li class="nav-item">
                                     <a href="statement.html" class="nav-link ">
-                                        <span class="title">Water</span>
+                                        <span class="title">Reprint Receipt</span>
                                     </a>
                                 </li>
 
@@ -360,7 +348,8 @@ include "../api/index.php";
                                         <div class="offset-md-3 col-md-9">
                                             <!-- <button type="submit" class="btn btn-info">Submit</button> -->
                                             <p>
-                                                <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Submit</a>
+                                                <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Mpesa</a>
+                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Cash</button>
                                             </p>
                                             <div class="row">
                                                 <div class="col">
@@ -389,6 +378,24 @@ include "../api/index.php";
                                                     </div>
 
 
+                                                </div>
+                                                <div class="col">
+                                                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                                      <div class="card card-body">
+                                                          <input type="text" name="phone" value="" id="phone" v-model="phoneNumber"
+                                                                 placeholder="Enter Phone Number"
+                                                                 data-trigger="change"
+                                                                 data-validation-minlength="1" data-type="number"
+                                                                 data-required="true"
+                                                                 data-error-message="Enter a valid number."/>
+                                                          <div>
+                                                              <button v-on:click="renewBusinessPermit" class="btn btn-primary" type="button"
+                                                                      style="  width:100px; text-align: center; margin-left:0%;margin-top:13px;">
+                                                                  Pay
+                                                              </button>
+                                                          </div>
+                                                      </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
